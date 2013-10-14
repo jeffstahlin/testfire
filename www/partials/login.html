@@ -1,0 +1,23 @@
+
+<h2>Sign in to Play</h2>
+
+<form>
+    <label>
+        <span>email</span>
+        <input type="text" ng-model="email" />
+    </label>
+    <label>
+        <span>password</span>
+        <input type="password" ng-model="pass" />
+    </label>
+    <label ng-cloak ng-show="createMode">
+        <span>confirm pass</span>
+        <input type="password" ng-model="confirm" />
+    </label>
+    <button ng-click="login()" ng-hide="createMode" class="loginBtn">Log In</button>
+    <button ng-click="createMode = true" ng-hide="createMode" class="accountBtn">Create Account</button>
+    <button ng-cloak ng-show="createMode" ng-click="createAccount()">Ready to Create</button>
+
+    <p ng-show="err" class="error">{{err}}</p>
+</form>
+

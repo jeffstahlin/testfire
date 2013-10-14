@@ -1,0 +1,6 @@
+<h2>Quizzes</h2>
+<div class="quizlist">
+  <a href="#/quiz/{{quiz.title}}" ng-repeat="quiz in quizzes" style="background: url('{{quiz.image}}');" ng-click="goNext('/{{quiz.title}}')" class="center full quizzes">
+    <header>{{quiz.title}}</header>
+  </a>
+</div>

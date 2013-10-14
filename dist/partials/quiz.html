@@ -1,0 +1,17 @@
+<h2>Quiz</h2>
+
+<div id="timer">
+  {{counter}}
+</div>
+<div ng-repeat="questions in quiz" class="center full card quiz">
+  <img src="{{questions.image}}" />
+  <content>
+    <label for="{{questions.answer_1}}">{{questions.answer_1}}</label>
+    <input type="radio" name="{{questions.title}}" value="{{questions.answer_1}}" id="{{questions.answer_1}}" />
+    <label for="{{questions.answer_2}}">{{questions.answer_2}}</label>
+    <input type="radio" name="{{questions.title}}" value="{{questions.answer_2}}" id="{{questions.answer_2}}" />
+    <label for="{{questions.answer_3}}">{{questions.answer_3}}</label>
+    <input type="radio" name="{{questions.title}}" value="{{questions.answer_3}}" id="{{questions.answer_3}}" />
+  </content>
+</div>
+<div class="topcoat-button center full" ontouchend="submitQuiz('')">Submit</div>
